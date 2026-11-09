@@ -11,7 +11,7 @@ from interfaces import BaseDigitalClock
 from clocks import AnalogClock
 
 
-class AnalogToDigitalAdapter(BaseDigitalClock):
+class ClockAdapter(BaseDigitalClock):
     def __init__(self, analog_clock: AnalogClock):
         self._analog_clock= analog_clock
 
