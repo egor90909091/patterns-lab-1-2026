@@ -8,11 +8,11 @@ from datetime import datetime
 
 from consts import DayNightDivision
 from interfaces import BaseDigitalClock
-from clocks import AnalogClock
+from interfaces import BaseAnalogClock
 
 
 class ClockAdapter(BaseDigitalClock):
-    def __init__(self, analog_clock: AnalogClock):
+    def __init__(self, analog_clock: BaseAnalogClock):
         self._analog_clock= analog_clock
 
     def set_date_time(self, date: datetime) -> None:
