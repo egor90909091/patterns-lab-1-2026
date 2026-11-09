@@ -93,7 +93,7 @@ python -m pytest
 
 ### Adapter
 
-Клиентский код работает с интерфейсом `BaseDigitalClock`, то есть ему нужно время в виде datetime. А готовый класс `AnalogClock` хранит время как углы стрелок и признак AM/PM. Менять `AnalogClock` нельзя, поэтому я был реализован адаптер `AnalogToDigitalAdapter`.
+Клиентский код работает с интерфейсом `BaseDigitalClock`, то есть ему нужно время в виде datetime. А готовый класс `AnalogClock` хранит время как углы стрелок и признак AM/PM. Менять `AnalogClock` нельзя, поэтому я был реализован адаптер `ClockAdapter`.
 
 Адаптер реализует `BaseDigitalClock`, а внутри хранит объект `AnalogClock`, который получает в конструкторе.
 

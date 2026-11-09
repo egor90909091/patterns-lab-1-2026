@@ -8,14 +8,14 @@
 """
 from datetime import datetime
 
-from adapters.digital_clock_adapter import AnalogToDigitalAdapter
+from adapters.digital_clock_adapter import ClockAdapter
 from clocks import AnalogClock
 from services import ClockFormatter, ClockHistory
 
 
 class ClockFacade:
     def __init__(self) -> None:
-        self._adapter = AnalogToDigitalAdapter(AnalogClock())
+        self._adapter = ClockAdapter(AnalogClock())
         self._formatter = ClockFormatter()
         self._history = ClockHistory()
 
