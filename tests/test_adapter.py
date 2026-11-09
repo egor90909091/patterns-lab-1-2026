@@ -14,7 +14,7 @@ def test_morning_round_trip():
 
 
 def test_midnight():
-    """⭐ Полночь 00:00:00 (AM)."""
+    """Полночь 00:00:00 (AM)."""
     adapter = AnalogToDigitalAdapter(AnalogClock())
     dt = datetime(2024, 1, 1, 0, 0, 0)
     adapter.set_date_time(dt)
@@ -22,7 +22,7 @@ def test_midnight():
 
 
 def test_noon():
-    """⭐ Полдень 12:00:00 (PM)."""
+    """Полдень 12:00:00 (PM)."""
     adapter = AnalogToDigitalAdapter(AnalogClock())
     dt = datetime(2024, 6, 15, 12, 0, 0)
     adapter.set_date_time(dt)
