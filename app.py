@@ -1,10 +1,13 @@
 from datetime import datetime
 
+from adapters.digital_clock_adapter import ClockAdapter
+from clocks import AnalogClock
 from facades.clock_facade import ClockFacade
+from services import ClockFormatter, ClockHistory
 
 
 def main() -> None:
-    facade = ClockFacade()
+    facade = ClockFacade(ClockAdapter(AnalogClock()), ClockFormatter(), ClockHistory())
     print("ClockFacade создан.")
 
     now = datetime.now()

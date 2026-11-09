@@ -7,8 +7,6 @@
 - ClockHistory.
 """
 from datetime import datetime
-from adapters.digital_clock_adapter import ClockAdapter
-from clocks import AnalogClock
 from services import ClockFormatter, ClockHistory
 from interfaces.base_digital_clock import BaseDigitalClock
 
@@ -19,9 +17,9 @@ class ClockFacade:
         formatter: ClockFormatter | None = None,
         history: ClockHistory | None = None,
     ) -> None:
-        self._clock = clock or ClockAdapter(AnalogClock())
-        self._formatter = formatter or ClockFormatter()
-        self._history = history or ClockHistory()
+        self._clock = clock
+        self._formatter = formatter
+        self._history = history
 
     def set_current_datetime(self, date: datetime) -> None:
         self._clock.set_date_time(date)
