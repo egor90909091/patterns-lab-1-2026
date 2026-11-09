@@ -6,7 +6,7 @@ from consts import DayNightDivision
 
 
 def test_morning_round_trip():
-    """Утро: set → get возвращает исходное время."""
+    """Утро: возвращает исходное время."""
     adapter = AnalogToDigitalAdapter(AnalogClock())
     dt = datetime(2024, 11, 9, 9, 30, 15)
     adapter.set_date_time(dt)
